@@ -8,12 +8,17 @@ html , body{
     /* background-color: rgba(0, 0, 0, 0.3); */
     /* color: aliceblue; */
     line-height: 2rem;
+    background-color: rgb(246, 246, 205);
+}
+a{
+    font-size: 2rem !important;
 }
 
 h2{
     font-weight: bold;
     text-shadow: 2px 2px blue;
     letter-spacing: 2px;
+    
 }
 h4{
     font-size: 2rem;
