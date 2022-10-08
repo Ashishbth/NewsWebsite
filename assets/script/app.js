@@ -1,14 +1,3 @@
-
-// async function display(){
-
-//     let url = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=57042d008dda44c28dd28a5859812ad8";
-//     let response = await fetch(url);
-    
-//     let commits = await response.json();
-    
-//     console.log(commits);
-// }
-
 let img = document.getElementsByTagName('img');
 let list = document.getElementsByTagName('p');
 
@@ -16,15 +5,7 @@ fetch('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=57042d008dda
 .then(res => res.json())
 .then(commits => {
     let post = commits.articles;
-     console.log(post);
-     console.log(post[0].author);
-     console.log(post[0].content);
-     console.log(post[0].description);
-     console.log(post[0].source);
-     console.log(post[0].title);
-     console.log(post[0].urlToImage);
-
-     function show(){
+         function show(){
         let box = document.getElementById('container');
         for(let num in post){
             console.log(post[num].author);
@@ -42,11 +23,11 @@ fetch('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=57042d008dda
                             <img src="${post[num].urlToImage}" alt="urlToImage">
                             <p>${post[num].publishedAt}</p>
                         </div>
-                        <div class="col">
+                        <div class="col my-4">
                             <h4>
                                 ${post[num].description}
                             </h4>
-                            <p>
+                            <p class="my-3">
                             ${post[num].content}
                             </p>
                             <a href="${post[num].url}" class="btn btn-outline-primary">Read More</a>
